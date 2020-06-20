@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/master.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/jquery.maskedinput-master/dist/jquery.maskedinput.js" type="text/javascript"></script>
+    <link href="node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <script src="node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+<div id="state1" class="block">
+    <div class="d-flex">
+        <div class="head">
+            <a href="#">
+                <img class="logo" src="img/logo.svg" width="auto" height="auto" alt="" loading="lazy">
+            </a>
+        </div>
+    </div>
+    <h1 id="targetDiv" class="bilet">БИЛЕТЫ</h1>
+    <div class="d-flex buy-tickets">
+        <div id="div1" style="display:block" class="forum">
+            <h2 class="mt-5 buyBilet">Онлайн покупка билета</h2>
+            <div class="forumblock">
+                <h5 class="d-flex justify-content-lg-start justify-content-center">1. Выберите дату сеанса</h5>
+                <div class="d-flex justify-content-lg-start justify-content-center">
+                    <input id="my-element" class="datepicker-here calendar" name="calendar" placeholder="дд.мм.гггг">
+                </div>
+                <h5 class="d-flex justify-content-lg-start justify-content-center">2. Выберите билеты</h5>
+                <div class="d-flex flex-column tickets">
+                    <div class="row ticket">
+                        <div class="col-lg-6 p-2">
+                            <h1 class="d-flex justify-content-lg-start justify-content-center">Категория</h1>
+                            <h2 class="text-left d-flex justify-content-lg-start justify-content-center">Взрослый</h2>
+                        </div>
+                        <div class="col-lg-2 p-2">
+                            <h1 class=" d-flex justify-content-lg-start justify-content-center">Стоимость</h1>
+                            <h2 class="text-left d-flex justify-content-lg-start justify-content-center">700 тг</h2>
+                        </div>
+                        <div class="col-lg-2 p-2">
+                            <h1 class="d-flex justify-content-lg-start justify-content-center">Количество</h1>
+                            <div class="ml-2 mt-4 btn-group d-flex justify-content-lg-start justify-content-center" role="group">
+                                <button type="button" class="minus button1">-</button>
+                                <label>
+                                    <input type="text" name="qty" id="qty" maxlength="12" class="button2">
+                                </label>
+                                <button type="button" class="plus button1">+</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 p-2">
+                            <h1 class="d-flex justify-content-lg-start justify-content-center">Сумма</h1>
+                            <h2 class="text-left d-flex justify-content-lg-start justify-content-center">0 тг</h2>
+                        </div>
+                    </div>
+                    <div class="row ticket">
+                        <div class="col-lg-6 col-12 p-2">
+                            <h1 class="d-flex justify-content-lg-start justify-content-center">Категория</h1>
+                            <h2 class="text-left d-flex justify-content-lg-start justify-content-center">Детский</h2>
+                        </div>
+                        <div class="col-lg-2 col-12 p-2">
+                            <h1 class="d-flex justify-content-lg-start justify-content-center">Стоимость</h1>
+                            <h2 class="text-left d-flex justify-content-lg-start justify-content-center">200 тг</h2>
+                        </div>
+                        <div class="col-lg-2 col-12 p-2">
+                            <h1 class="d-flex justify-content-lg-start justify-content-center">Количество</h1>
+                            <div class="ml-2 mt-4 btn-group d-flex justify-content-lg-start justify-content-center" role="group">
+                                <button type="button" class="minus1 button1">-</button>
+                                <label>
+                                    <input type="text" name="qtz" id="qtz" maxlength="12" class="button2">
+                                </label>
+                                <button type="button" class="plus1 button1">+</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-12 p-2">
+                            <h1 class="d-flex justify-content-lg-start justify-content-center">Сумма</h1>
+                            <h2 class="text-left d-flex justify-content-lg-start justify-content-center">0 тг</h2>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center mt-4">
+                        <h1 class="mx-5 p-2">Общая стоимость:</h1>
+                        <h2 class="p-2 sumCost">0 тг</h2>
+                    </div>
+                </div>
+                <h5 class="d-flex justify-content-lg-start justify-content-center">3. Введите личные данные</h5>
+                <div class="row data">
+                    <div class="col-lg-6 d-flex justify-content-lg-start justify-content-center p-3">
+                        <div class="w-75">
+                            <h3>Ваша Фамилия</h3>
+                            <form class="form-inline">
+                                <input class="primary-input form-control mr-sm-2 famin" type="text" placeholder="Введите фамилию"/>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-lg-start justify-content-center p-3">
+                        <div class="w-75">
+                            <h3>Номер телефона</h3>
+                            <input class="primary-input form-control mr-sm-2 phone1" type="text"
+                                   placeholder="+7(_ _ _) _ _ _ - _ _ - _ _"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row data">
+                    <div class="col-lg-6 d-flex justify-content-lg-start justify-content-center p-3">
+                        <div class="w-75">
+                            <h3>Ваше Имя</h3>
+                            <form class="form-inline">
+                                    <input class="primary-input form-control mr-sm-2 famin" type="text" placeholder="Введите имя">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-lg-start justify-content-center p-3">
+                        <div class="w-75">
+                        <h3>Ваша почта</h3>
+                            <input class="primary-input form-control mr-sm-2 email1" type="email" placeholder="Введите e-mail">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row checklist">
+                    <div class="p-3">
+                        <label>
+                            <input class="mr-sm-2 check" type="checkbox">
+                        </label>
+                    </div>
+                    <div class="agree">
+                        <p>Согласен с <u>политикой конфиденциальности</u> и <u>пользовательским соглашением</u>
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center mt-5">
+                    <div class="p-3">
+                        <input onclick="replace(); mylinkfunction()" type="image" src="img/payment.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="forum2 complete" id="div2" style="display: none">
+            <h2 class="spasibo">Спасибо!</h2>
+            <div class="mb-5 successful">
+                <h3>Ваша оплата успешно завершена.</h3>
+                <h3>Мы отправили билеты на указанный Вами e-mail.</h3>
+                <h3>Покажите билеты при входе контроллеру.</h3>
+            </div>
+            <div class="d-flex row justify-content-center imges">
+                <div class="d-flex justify-content-lg-start justify-content-center">
+                    <img src="img/ticket1.svg" alt="">
+                </div>
+                <div class="d-flex justify-content-lg-start justify-content-center">
+                    <img src="img/ticket2.svg" alt="">
+                </div>
+            </div>
+            <div class="d-flex row justify-content-center">
+                <input class="kupit" onclick="replace1(); mylinkfunction()" type="image" src="img/download.svg" alt="">
+            </div>
+        </div>
+        <div class="forum3 complete" id="div3" style="display: none">
+            <h2 class="oops">Что-то пошло не так...</h2>
+            <h3>К сожалению во время выполнения транзакции</h3>
+            <h3>произошла ошибка.</h3>
+            <h3>Пожалуйста, повторите операцию.</h3>
+            <div class="d-flex row justify-content-center">
+                <input class="error" onclick="replace2();mylinkfunction()" type="image" src="img/toPay.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="foot"></div>
+</div>
+<script type="text/javascript" src="script/script.js">
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
